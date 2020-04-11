@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: Tennis App API
+  version: '1.0'
+  description: API backend para o aplicativo
+servers:
+  - {}
+paths:
+  /user:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  user_login:
+                    type: string
+                  user_password:
+                    type: string
+                  user_display_name:
+                    type: string
+                  user_lat:
+                    type: number
+                  user_long:
+                    type: number
+              examples:
+                example-1: {}
+      operationId: get-user
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+      description: |-
+        get user info
+        if not id specified, get all the users
+components:
+  schemas: {}
