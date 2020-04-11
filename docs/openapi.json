@@ -1,0 +1,108 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Tennis App API",
+    "version": "1.0",
+    "description": "API backend para o aplicativo",
+    "contact": {
+      "name": "Allan Neros",
+      "url": "labs",
+      "email": "allan@neros.com.br"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://labs.believeit.com.br/projetos/tennis-app-api",
+      "description": "v1"
+    }
+  ],
+  "paths": {
+    "/user": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user_login": {
+                      "type": "string"
+                    },
+                    "user_password": {
+                      "type": "string"
+                    },
+                    "user_display_name": {
+                      "type": "string"
+                    },
+                    "user_lat": {
+                      "type": "number"
+                    },
+                    "user_long": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "examples": {
+                  "get user id 2": {
+                    "value": [
+                      {
+                        "id": "2",
+                        "user_login": "neros",
+                        "user_password": "111",
+                        "user_display_name": "allan",
+                        "user_lat": "0",
+                        "user_long": "0"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-user",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "examples": {
+                "get user id 1": {}
+              }
+            }
+          },
+          "description": "What you need to set the info"
+        },
+        "description": "get user info\nif not id specified, get all the users",
+        "security": [
+          {
+            "Key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {},
+    "securitySchemes": {
+      "Key": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}
