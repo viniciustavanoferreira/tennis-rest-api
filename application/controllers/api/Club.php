@@ -9,7 +9,7 @@ class Club extends REST_Controller
     }
     
     //get users list
-    function users_get() {
+    function users() {
         if($this->get('id')) {
             $users = $this->club_model->getUsers($this->get('id'));
         } 
@@ -22,7 +22,7 @@ class Club extends REST_Controller
     }
     
     //get court list
-    function courts_get() {
+    function courts() {
         if($this->get('id')) {
             $courts = $this->club_model->getCourts($this->get('id'));
         } 
@@ -34,7 +34,7 @@ class Club extends REST_Controller
         }
     }
     
-    //get singke record
+    //get single record
     function index_get()     {
         //if not specified, get the entire table
         if(!$this->get('id')) {
@@ -81,6 +81,7 @@ class Club extends REST_Controller
     //delete record
     //cannot send body, just set the parameter
     function index_delete($id) {
+        //TODO: continuar a partir daqui, pegar a base do controller User
         $result = $this->club_model->delete($id);
         
         if($result === FALSE)        {
