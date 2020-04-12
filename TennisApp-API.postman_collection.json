@@ -99,13 +99,37 @@
 				},
 				{
 					"name": "Get user friends",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "ESSE AQUI NAO TA FUNCIONANDO NESSA PORRA",
+							"raw": "http://labs.believeit.com.br/projetos/tennis-app-api/api/user/1/friends",
+							"protocol": "http",
 							"host": [
-								"ESSE AQUI NAO TA FUNCIONANDO NESSA PORRA"
+								"labs",
+								"believeit",
+								"com",
+								"br"
+							],
+							"path": [
+								"projetos",
+								"tennis-app-api",
+								"api",
+								"user",
+								"1",
+								"friends"
 							]
 						}
 					},
@@ -116,19 +140,98 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"1\",\n    \"friend_user_id\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://labs.believeit.com.br/projetos/tennis-app-api/api/user/1/friends",
+							"protocol": "http",
+							"host": [
+								"labs",
+								"believeit",
+								"com",
+								"br"
+							],
+							"path": [
+								"projetos",
+								"tennis-app-api",
+								"api",
+								"user",
+								"1",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove friend",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://labs.believeit.com.br/projetos/tennis-app-api/api/user/1/friends/4/delete",
+							"protocol": "http",
+							"host": [
+								"labs",
+								"believeit",
+								"com",
+								"br"
+							],
+							"path": [
+								"projetos",
+								"tennis-app-api",
+								"api",
+								"user",
+								"1",
+								"friends",
+								"4",
+								"delete"
+							]
 						}
 					},
 					"response": []
 				},
 				{
 					"name": "Get club list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://labs.believeit.com.br/projetos/tennis-app-api/api/user/1/clubs",
+							"protocol": "http",
+							"host": [
+								"labs",
+								"believeit",
+								"com",
+								"br"
+							],
+							"path": [
+								"projetos",
+								"tennis-app-api",
+								"api",
+								"user",
+								"1",
+								"clubs"
+							]
 						}
 					},
 					"response": []
@@ -138,8 +241,60 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"1\",\n    \"club_id\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": ""
+							"raw": "http://labs.believeit.com.br/projetos/tennis-app-api/api/user/1/clubs",
+							"protocol": "http",
+							"host": [
+								"labs",
+								"believeit",
+								"com",
+								"br"
+							],
+							"path": [
+								"projetos",
+								"tennis-app-api",
+								"api",
+								"user",
+								"1",
+								"clubs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove club",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://labs.believeit.com.br/projetos/tennis-app-api/api/user/2/clubs/1/delete",
+							"protocol": "http",
+							"host": [
+								"labs",
+								"believeit",
+								"com",
+								"br"
+							],
+							"path": [
+								"projetos",
+								"tennis-app-api",
+								"api",
+								"user",
+								"2",
+								"clubs",
+								"1",
+								"delete"
+							]
 						}
 					},
 					"response": []
