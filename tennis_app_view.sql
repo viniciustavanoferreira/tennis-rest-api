@@ -18,7 +18,7 @@ AS
 	WHERE 	R.user_relation_type='F'
 ;
 -- lista consolidada de amigos - distinct
-CREATE VIEW uvw_user_friend 
+CREATE VIEW uvw_user_friends 
 AS
 	SELECT 	DISTINCT F.id, F.user_id, F.user_display_name, F.user_lat, F.user_long
 	FROM	uvw_user_friendship F
